@@ -1,0 +1,4 @@
+include calc_CIF/schema.sql
+graft calc_CIF/static
+graft calc_CIF/templates
+global-exclude *.pyc

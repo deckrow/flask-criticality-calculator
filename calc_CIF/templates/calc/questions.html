@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Questions{% endblock %}
+
+{% block main %}
+
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">Перевірка об'єкта на рівень критичності.</h1>
+        </div>
+    </div>
+
+    <form class="questions" method="post">
+        {% for question in questions %}
+            {% set question_name = "question__name--" + questions.index(question)|string %}
+
+            {% if loop.last %}
+            <div class="question question--last">
+            {% else %}
+            <div class="question">
+            {% endif %}
+
+                <h4 class="question__title">{{ question['title'] }}</h4>
+
+                {% for answer in question['answers'] %}
+                    {% set question_id = "question__" + questions.index(question)|string + question['answers'].index(answer)|string %}
+                    {% set idx_el = 4 - question['answers'].index(answer) %}
+                    <div class="question__choices">
+                    {% if loop.first %}
+                    <input class="question__input" type="radio" id="{{ question_id }}" name="{{ question_name }}" value="{{ idx_el }}" checked>
+                    {% else %}
+                    <input class="question__input" type="radio" id="{{ question_id }}" name="{{ question_name }}" value="{{ idx_el }}">
+                    {% endif %}
+                    <label class="question__label" for="{{ question_id }}">{{ answer }}</label><br>
+                    </div>
+                {% endfor %}
+                </div>
+
+        {% endfor %}
+
+        <input type="submit" class="btn btn-outline-primary" value="Розрахувати" />
+    </form>
+{% endblock %}

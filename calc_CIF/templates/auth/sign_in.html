@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Log In{% endblock %}
+
+{% block main %}
+    <form method="post" class="form-signin">
+      <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Вхід</h1>
+      <label for="username" class="sr-only">Username</label>
+      <input type="text" id="username" style="margin-bottom: 15px" name="username" class="form-control" placeholder="Ваш логін" required >
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Ваш пароль" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Запам'ятати мене
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Увійти</button>
+    </form>
+{% endblock %}

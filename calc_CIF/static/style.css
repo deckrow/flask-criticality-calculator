@@ -1,0 +1,251 @@
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.container {*/
+/*    margin: 0 auto;*/
+/*    max-width: 1120px;*/
+/*}*/
+
+/*.main {*/
+/*    padding-top: 100px;*/
+/*}*/
+
+/*.btn {*/
+/*    text-decoration: none;*/
+/*    border-radius: 5px;*/
+/*    padding: 15px 0;*/
+/*    text-align: center;*/
+/*    min-width: 120px;*/
+/*}*/
+/*.btn--green {*/
+/*    background: #3B666B;*/
+/*    color: #fff;*/
+/*}*/
+
+/*.choice__facility {*/
+/*    border: 1px solid black;*/
+/*    padding: 15px;*/
+/*    margin-bottom: 15px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.facility__btn {*/
+/*    display: inline-block;*/
+/*    position: absolute;*/
+/*    right: 15px;*/
+/*    top: 15px;*/
+/*}*/
+
+/*.question--last {*/
+/*    margin-bottom: 20px*/
+/*}*/
+
+/*.questions__btn {*/
+/*    display: inline-block;*/
+/*}*/
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+
+.wrapper {
+    min-height: calc(100vh - 60px);
+}
+
+
+.questions {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.question {
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.question::before {
+  content: "";
+  background: url("./imgs/question.svg") center;
+  background-size: cover;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: -40px;
+}
+
+.question::after {
+  content: "";
+  background: url("./imgs/dot.svg") center repeat;
+  width: 4px;
+  position: absolute;
+  top: 32px;
+  left: -29px;
+  bottom: 6px;
+}
+
+.question--last:after {
+  content: "";
+  background: none;
+}
+
+.question__title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.question__choices {
+  position: relative;
+  display: block;
+}
+
+.question__input {
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.question__label {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  /*font-family: "Playfair Display", Georgia, "Times New Roman", serif;*/
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /*font-family: "Playfair Display", Georgia, "Times New Roman", serif;*/
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+
+
+/*
+ * Footer
+ */
+.blog-footer {
+  line-height: 60px;
+  height: 60px;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 100px auto 0;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
