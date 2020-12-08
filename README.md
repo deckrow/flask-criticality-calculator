@@ -1,6 +1,6 @@
-#Criticality calculator
+# Criticality calculator
 
-###Installation
+### Installation
 
 ```bash
 $ git clone https://github.com/deckrow/flask-criticality-calculator.git
