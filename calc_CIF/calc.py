@@ -8,12 +8,11 @@ from calc_CIF.db import get_db
 
 import os
 
-bp = Blueprint('calc', __name__, url_prefix='/calc')
+bp = Blueprint('calc', __name__)
 
-#. venv/bin/activate; export FLASK_APP=calc_CIF; export FLASK_ENV=development; flask run
 
-@bp.route('/choice')
-def choice():
+@bp.route('/')
+def index():
     data = get_json("detail_info.json")
 
     db = get_db()
@@ -21,7 +20,7 @@ def choice():
         'SELECT id, name, check_date, criticality_category FROM facilities'
     ).fetchall()
 
-    return render_template('calc/choice.html', facilities=facilities, info=data['info'])
+    return render_template('calc/index.html', facilities=facilities, info=data['info'])
 
 
 @bp.route('/detail_info/<int:id>')
