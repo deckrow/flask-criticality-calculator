@@ -20,7 +20,7 @@ $ flask run
 
 ### Usage
 
-1. Pick up the object.
+1. Select the object.
 2. Log in
 3. Check your object.
 4. Get the criticality results.
